@@ -10,13 +10,14 @@ class Hash{
 	public:
 		Hash();
 		string getValue() const;
-		void setValue(int hashs);
+		void setValue(string hashs);
 		void outPut() const;
 	private:
-		int hash;
+		string hash;
 };
 
+Hash::Hash(){setValue("");}
 void Hash::setValue(string hashs) {hashs = hash;}
-string Hash::getValue() const (return hashs;)
-void Hash::outPut() const ( cout << "md5 hash: "
-								<< md5(getValue())<<endl;)
+string Hash::getValue() const {return md5(hash);}
+void Hash::outPut() const {cout << "md5 hash: "
+								<< getValue()<<endl;}

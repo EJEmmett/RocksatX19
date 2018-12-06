@@ -6,8 +6,10 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-	
-	system("PAUSE")
+	Hash h;
+	h.setValue("test");
+	h.outPut();
+	system("PAUSE");
 	return 0;
 }
 
