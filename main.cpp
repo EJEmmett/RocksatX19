@@ -7,8 +7,10 @@ using namespace std;
 
 int main(int argc, char** argv) {
 	Hash h;
-	h.setValue("test");
-	h.outPut();
+	string hash;
+//	h.setValue("test");
+//	h.outPut();
+	hash = h.getValue();
 	system("PAUSE");
 	return 0;
 }
