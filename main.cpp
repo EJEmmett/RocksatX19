@@ -2,6 +2,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sys/types.h>
+#include <winsock2.h>
+//#include <netdb.h>
+
 #include "hash.h"
 using namespace std;
 
