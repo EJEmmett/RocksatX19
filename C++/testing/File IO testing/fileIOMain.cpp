@@ -16,18 +16,18 @@ using namespace std;
 }*/
 
 int main(int argc, char** argv) {
-	Writing* write;
+	Writing write;
 	string sTest;
 	sTest = "";
 	int iTest = 0;
 	cout<<"Enter a string: \n";
 	cin>>sTest;
-	write -> setString(sTest);
+	write.setString(sTest);
 	cout<<"Enter a int: \n";
 	cin>>iTest;
-	write -> setInt(iTest);
-	write -> writeString();
-	write -> writeInt();
+	write.setInt(iTest);
+	write.writeString();
+	write.writeInt();
 	system("PAUSE");
 	return 0;
 }

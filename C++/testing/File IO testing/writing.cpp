@@ -11,14 +11,14 @@ Writing::Writing()
 	
 }
 
-string Writing::setString(string writeS) {writeS = s;}
-int Writing::setInt(int writeI) {writeI = i;}
+string Writing::setString(string writeS) {s = writeS;}
+int Writing::setInt(int writeI) {i = writeI;}
 
 void Writing::writeString()
 {
 	//ofstream ws("outPut.txt", ios::out | ios::trunc);
 	ofstream ws;
-	ws.open("out.txt");
+	ws.open("out.txt", ios::out);
 	ws << s << "\n";
 	ws.close();
 }
