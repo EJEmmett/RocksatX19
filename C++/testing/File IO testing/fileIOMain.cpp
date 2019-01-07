@@ -15,19 +15,30 @@ using namespace std;
 	return c;
 }*/
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) 
+{
 	Writing write;
-	string sTest;
-	sTest = "";
-	int iTest = 0;
-	cout<<"Enter a string: \n";
-	cin>>sTest;
-	write.setString(sTest);
-	cout<<"Enter a int: \n";
-	cin>>iTest;
-	write.setInt(iTest);
-	write.writeString();
-	write.writeInt();
+//	string sTest;
+//	int iTest = 0;
+//	cout<<"Enter a string: \n";
+//	cin>>sTest;
+	
+//	write.setString(sTest);
+	
+//	cout<<"Enter a int: \n";
+//	cin>>iTest;
+	
+//	write.setInt(iTest);
+	
+	//write.writeString();
+	//write.writeInt();
+	
+	//Print funciton for both ints and strings
+	write.testString();
+
+
+//	write.testInt();
+	
 	system("PAUSE");
 	return 0;
 }
