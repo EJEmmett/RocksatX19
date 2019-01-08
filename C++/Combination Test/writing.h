@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+//#include "hash1.h"
 using namespace std;
 
 #ifndef WRITING_H
@@ -13,10 +14,8 @@ class Writing
 	public:
 		Writing();
 		string setString(string writeS);
-		string importHash(string hash);
 		int setInt(int writeI);
 		
-		string getHash() const;
 		void testString();
 		void testInt();
 		void writeString();
@@ -25,11 +24,10 @@ class Writing
 		string stringTest;
 		int intTest;
 		
-		
 	private:
 		string s;
 		int i;
-		string h;
+		
 		
 };
 #endif

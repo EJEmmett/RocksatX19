@@ -5,20 +5,14 @@
 #include <fstream>
 #include "md5.h"
 using namespace std;
-using std::cout; using std::endl;
+//using std::cout; using std::endl;
 class Hash{
 	public:
-		Hash();
+		Hash() {};
 		string getValue() const;
 		void setValue(string hashs);
 		void outPut() const;
 	private:
 		string hash;
 };
-
-Hash::Hash(){setValue("");}
-void Hash::setValue(string hashs) {hashs = hash;}
-string Hash::getValue() const {return md5(hash);}
-void Hash::outPut() const {cout << "md5 hash: "
-								<< getValue()<<endl;}
 

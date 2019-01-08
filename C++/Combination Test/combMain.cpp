@@ -24,8 +24,7 @@ int main(int argc, char** argv) {
 	h.outPut();
 	//cout << "time: " << getTime();
 	hash = h.getValue();
-	cout << "\n MD5: " << hash;
-	write.importHash(h.getValue());
+//	cout << "\n MD5: " << hash;
 	//system("PAUSE");
 	//Print funciton for both ints and strings
 	write.testString();
