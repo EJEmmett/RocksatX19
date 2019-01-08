@@ -20,9 +20,9 @@ int main(int argc, char** argv) {
 	Hash h;
 	Writing write;
 	string hash;
-	int time;
-	time = getTime();
-	h.setValue(time);
+//	int time;
+//	time = getTime();
+	h.setValue("ssdd");
 	h.outPut();
 	hash = h.getValue();
 //	cout << "\n MD5: " << hash;
