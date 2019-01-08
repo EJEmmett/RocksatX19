@@ -13,13 +13,9 @@ class Writing
 {
 	public:
 		Writing();
-		string setString(string writeS);
-		int setInt(int writeI);
 		
-		void testString();
-		void testInt();
-		void writeString();
-		void writeInt();
+		void mainWrite();
+	
 	protected: 
 		string stringTest;
 		int intTest;

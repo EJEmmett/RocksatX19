@@ -20,14 +20,15 @@ int main(int argc, char** argv) {
 	Hash h;
 	Writing write;
 	string hash;
-	h.setValue("test");
+	int time;
+	time = getTime();
+	h.setValue(time);
 	h.outPut();
-	//cout << "time: " << getTime();
 	hash = h.getValue();
 //	cout << "\n MD5: " << hash;
 	//system("PAUSE");
 	//Print funciton for both ints and strings
-	write.testString();
+	write.mainWrite();
 
 	return 0;
 }
