@@ -3,9 +3,11 @@
 #include <fstream>
 #include <sstream>
 #include <time.h>
+#include <cstdlib>
 //#include <sys/types.h>
 #include "hash1.h"
 #include "writing.h"
+#include "randomWordGen.h"
 using namespace std; using std::cout; using std::endl;
 
 int menu()
@@ -14,6 +16,7 @@ int menu()
 	cout<<"\t\tCTU RockSat2019 Testing:\n"
 		<<"\t1. Run MD5 Generator.\n"
 		<<"\t2. Print Time.\n"
+		<<"\t3. Random Number test\n"
 		<<"\t9. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
@@ -30,8 +33,9 @@ int getTime()
 int main(int argc, char** argv) {
 	Hash h;
 	Writing write;
+	Random rand;
 	string hash;
-	int time, input;
+	int time, input, r;
 //	time = getTime();
 	do
 	{
@@ -46,6 +50,9 @@ int main(int argc, char** argv) {
 			break;
 			case 2:
 				cout << "time: " << getTime();
+			break;
+			case 3:
+				cout << "Random number: " << rand.returnNumber() << endl;
 			break;
 			case 9: cout <<"EXITING"<<endl;
 			break;

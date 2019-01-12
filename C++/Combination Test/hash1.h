@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 #include "md5.h"
 using namespace std;
 //using std::cout; using std::endl;

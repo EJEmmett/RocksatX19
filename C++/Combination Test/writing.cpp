@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
 #include "writing.h"
 #include "hash1.h"
 using namespace std;
