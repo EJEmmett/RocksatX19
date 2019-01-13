@@ -18,6 +18,7 @@ void Random::setRandom(int r)
 
 int Random::returnNumber()
 {
+	int r;
 	r = rand() %  80277 + 1;
 	return r;
 }
