@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <time.h>
+#include <vector>
 #include <cstdlib>
 //#include <sys/types.h>
 #include "hash1.h"
@@ -17,6 +18,8 @@ int menu()
 		<<"\t1. Run MD5 Generator.\n"
 		<<"\t2. Print Time.\n"
 		<<"\t3. Random Number test\n"
+		<<"\t4. Random number loop testing\n"
+		<<"\t5. Read file list test\n"
 		<<"\t9. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
@@ -53,6 +56,12 @@ int main(int argc, char** argv) {
 			break;
 			case 3:
 				cout << "Random number: " << rand.returnNumber() << endl;
+			break;
+			case 4:
+				cout << "Random number loop testing\n" << rand.getWordComb() << endl;
+			break;
+			case 5:
+				rand.readFileTest();
 			break;
 			case 9: cout <<"EXITING"<<endl;
 			break;

@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 class Random
@@ -11,6 +12,8 @@ class Random
 		Random();
 		void setRandom(int r);
 		int returnNumber();
+		int getWordComb();
+		void readFileTest();
 	
 	private:
 		int random;
