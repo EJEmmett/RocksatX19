@@ -6,6 +6,12 @@ __pycache__/
 
 # C extensions
 *.so
+.o
+.exe
+.layout
+.out
+.win
+.gch
 
 # Installer logs
 pip-log.txt
@@ -24,4 +30,6 @@ venv.bak/
 
 # Mac Files
 .DS_Store
-Untitled1
+
+
+
