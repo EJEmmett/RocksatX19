@@ -9,42 +9,35 @@
 #include "hash1.h"
 #include "writing.h"
 #include "randomWordGen.h"
-using namespace std; using std::cout; using std::endl;
+using namespace std;
 
-int menu()
-{
+int menu(){
 	int choice;
-	cout<<"\t\tCTU RockSat2019 Testing:\n"
-		<<"\t1. Run MD5 Generator.\n"
-		<<"\t2. Print Time.\n"
-		<<"\t3. Random Number test\n"
-		<<"\t4. Random number loop testing\n"
-		<<"\t5. Read file list test\n"
-		<<"\t9. Exit.\n";
+	cout<<"CTU RockSat2019 Testing:\n\n"
+		<<"1. Run MD5 Generator.\n"
+		<<"2. Print Time.\n"
+		<<"3. Random Number test\n"
+		<<"4. Random number loop testing\n"
+		<<"5. Read file list test\n"
+		<<"9. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
 	return choice;
 }
 
-int getTime()
-{
-	int c;
-	c = clock();
-	return c;
+char* getTime(){
+	return ctime(new time_t(time(0)));
 }
 
-int main(int argc, char** argv) {
+int main(){
 	Hash h;
 	Writing write;
 	Random rand;
 	string hash;
-	int time, input, r;
-//	time = getTime();
-	do
-	{
+	int input, r;
+	do{
 		input = menu();
-		switch(input)
-		{
+		switch(input){
 			case 1:
 				h.setValue("ssdd");
 				h.outPut();
