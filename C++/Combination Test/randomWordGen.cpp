@@ -41,8 +41,10 @@ void Random::readFileTest()
 	ifstream in("dictionary.txt");
 	string line, s, word, mainWords;
 	int rand, rand2, count;
-	double tmp; //tmp == temp var
-	/*while (getline(in, line)) 
+	double tmp;
+	//COMMENT: this is a test to get the line number of a word.
+	/*tmp == temp var
+	while (getline(in, line)) 
 	{
 		cout << line <<endl;
 	}*/	
@@ -64,6 +66,7 @@ void Random::readFileTest()
 	//cout << readFromFile[rand-1] << endl;
 	for(int o=0; o<5; o++)
 	{
+		//COMMENT: random word from the dictonary test.
 		rand2 = Random::returnNumber();
 		word = readFromFile[rand2-1];
 		mainWords = mainWords + " " + word;

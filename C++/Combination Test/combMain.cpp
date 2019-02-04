@@ -27,6 +27,7 @@ int menu(){
 
 char* getTime(){
 	return ctime(new time_t(time(0)));
+	//COMMENT: gets the time from the system which will only be used for testing.
 }
 
 int main(){
@@ -39,6 +40,7 @@ int main(){
 		input = menu();
 		switch(input){
 			case 1:
+				//COMMENT: randomly sets the hash value, currently a work in progress.
 				h.setValue("ssdd");
 				h.outPut();
 				hash = h.getValue();
@@ -54,6 +56,7 @@ int main(){
 				cout << "Random number loop testing\n" << rand.getWordComb() << endl;
 			break;
 			case 5:
+				//COMMENT: reads the random word
 				rand.readFileTest();
 			break;
 			case 9: cout <<"EXITING"<<endl;
@@ -62,7 +65,8 @@ int main(){
 			break;
 		}
 	}while(input != 9);
-//	cout << "\n MD5: " << hash;
+	//COMMENT: tests.
+	//cout << "\n MD5: " << hash;
 	//system("PAUSE");
 	//Print funciton for both ints and strings
 	
