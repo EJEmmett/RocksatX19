@@ -1,0 +1,19 @@
+					*******HAS TO BE RAN ON A LINUX SYSTEM*******
+This is the guide for making a makefile on Linux, mainly for C++ programs.
+Part 1 This is for non-boost based programs:
+1. The makefile must be named makefile or MakeFile preferable to be uniform with us the first one.
+2. Then know the name of the object, which is the name of the program.
+3. Their are three parts of this the .o file the .cpp then the clean up part incase something goes wrong.
+4. the syntax for this is the following for the file name project.cpp:
+
+project: project.o
+	g++ -o project project.o
+project.o: project.cpp
+	g++ -c project.cpp
+clean:
+	rm -r *.o project
+	
+5. All of this should be ran as a super user. 
+Will be making a guide for the boost system makefile if testing goes good for it.
+Created by Samuel Schatz.
+ 
