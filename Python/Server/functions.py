@@ -1,24 +1,6 @@
 from time import sleep
-import socket
 import serial
 import serial.tools.list_ports
-
-
-class Sock(object):
-    '''Initializes a socket object to send data via lan'''
-    def __init__(self):
-        self.conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.conn.bind(('', 8000))
-        self.cli = socket.socket()
-
-    def begin_listening(self):
-        self.conn.listen(1)
-        self.cli, addr = self.conn.accept()
-
-    def send_message(self, message):
-        '''Sends the message to a client'''
-        self.cli.sendall(message.encode())
-
 
 class SerialDevice(object):
     '''Superclass to keep from cluttering subclasses'''
