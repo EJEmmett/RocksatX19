@@ -1,11 +1,22 @@
-from functions import Sock, Iridium, Arduino, test_ports
-import Net
+from Shared import SerialSuper, Net
 
-def begin_reading(soc, irid, ard, sock):
-    '''Continuously read from the arduino and send over socket and Iridium'''
+class Arduino(SerialSuper.SerialDevice):
+    def __init__(self):
+        '''Initializes a SerialDevice Subclass for the Arduino
+           Serial num: 321
+           Baudrate: 9600
+         '''
+        super().__init__(321, 9600)
+
+    def serial_read(self):
+        '''Reads from the arduino until it hits a newline char'''
+        return self.ser.readline().split()
+
+
+def begin_reading(ard, sock):
+    '''Continuously read from the arduino and send over socket'''
     while True:
         vals = ' '.join(str(x) for x in ard.serial_read())
-        irid.send_message(vals)
         # Continuously attempts to send UDP message
         while True:
             fail = sock.send_message(vals)
@@ -13,18 +24,14 @@ def begin_reading(soc, irid, ard, sock):
                 break;
 
 
-
-
 def main():
     '''Initializes classes and sets ports'''
-    irid = Iridium()
     ard = Arduino()
     sock = Net.Net(127.0.0.1, 8000) # Opens a UDP connection
 
-    ports = test_ports()
-    irid.set_port(ports)
+    ports = SerialSuper.test_ports()
     ard.set_port(ports)
 
-    begin_reading(irid, ard, sock)
+    begin_reading(ard, sock)
 
 main()

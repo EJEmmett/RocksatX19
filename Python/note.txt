@@ -1,0 +1,7 @@
+Run all Files using this structure
+
+Instead of 'python Server/main.py'
+
+Use 'python -m Server.main'
+
+This adds the base directory to the python executable path
