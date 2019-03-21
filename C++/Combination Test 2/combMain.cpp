@@ -26,7 +26,7 @@ int menu(){
 		<<"5. Read file list test\n"
 		<<"6. Start server without being able to exit\n"
 		<<"7. start server in background\n"
-		<<"8. Random MD5 hash"	
+		<<"8. Random MD5 hash"
 		<<"9. pass hash\n"
 		<<"10. Exit.\n";
 	cin >> choice;
@@ -43,7 +43,7 @@ int main(){
 	Writing write;
 	Random rand;
 	Server start;
-	string hash;
+	string hash, word, newValue;
 	int input, r;
 	do{
 		input = menu();
@@ -64,14 +64,15 @@ int main(){
 			break;
 			case 5:
 				//COMMENT: reads the random word
-				rand.readFileTest();
+				word = rand.readFileTest();
+				cout << "The random word is: " << word << endl;
 			break;
 			case 6:
 				cout << "Starting server\n" << start.runServer() << endl;
 			break;
 			case 7: start.runServer();
 			break;
-			case 8: 
+			case 8:
      		   newValue = rand.readFileTest();
      		   cout << "MD5 random value: " << md5(newValue) << endl;
 			break;
@@ -90,8 +91,7 @@ int main(){
 	//cout << "\n MD5: " << hash;
 	//system("PAUSE");
 	//Print funciton for both ints and strings
-	
+
 
 	return 0;
 }
-
