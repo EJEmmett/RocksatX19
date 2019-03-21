@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "hash1.h"
+#include "MD5New.h"
 //Hash::Hash(){}
 
 void Hash::setValue(string hashs)

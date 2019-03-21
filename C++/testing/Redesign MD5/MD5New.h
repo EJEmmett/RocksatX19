@@ -5,6 +5,8 @@
 #include <fstream>
 #include <cstdlib>
 #include "md5.h"
+#pragma once
+
 using namespace std;
 //using std::cout; using std::endl;
 class Hash{

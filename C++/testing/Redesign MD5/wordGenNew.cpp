@@ -4,13 +4,10 @@
 #include <fstream>
 #include <cstdlib>
 #include <vector>
-#include "randomWordGen.h"
+#include "wordGenNew.h"
 using namespace std;
 
-Random::Random()
-{
-
-}
+Random::Random(){}
 
 void Random::setRandom(int r)
 {

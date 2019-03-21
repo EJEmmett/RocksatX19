@@ -8,10 +8,10 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <ctime>
-#include "wordGenNew.h"
+//#include "wordGenNew.h"
 #include "wordGenNew.cpp"
-#include "MD5New.h"
-#include "MD5New.cpp'
+//#include "MD5New.h"
+#include "MD5New.cpp"
 
 using namespace std;
 
@@ -39,7 +39,7 @@ int main(){
   Hash h;
   string hash;
   int input, r;
-
+  Random rand;
   do{
     input = menu();
     switch(input){
@@ -48,7 +48,6 @@ int main(){
         h.setValue("ssdd");
         h.outPut();
         hash = h.getValue();
-        write.mainWrite();
       break;
       case 2:
         cout << "time: " << getTime();
@@ -66,6 +65,7 @@ int main(){
       case 6: cout << "exiting"<<endl;
 			default: cout << "invalid choice"<<endl;
 			break;
+    }
   }while(input != 6);
   return 0;
 }
