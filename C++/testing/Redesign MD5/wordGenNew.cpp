@@ -33,7 +33,7 @@ int Random::getWordComb()
 	return r2;
 }
 
-void Random::readFileTest()
+string Random::readFileTest()
 {
 	ifstream in("dictionary.txt");
 	string line, s, word, mainWords;
@@ -68,5 +68,5 @@ void Random::readFileTest()
 		word = readFromFile[rand2-1];
 		mainWords = mainWords + " " + word;
 	}
-	cout << mainWords;
+	return mainWords;
 }

@@ -14,7 +14,6 @@ class Hash{
 		Hash() {};
 		string getValue() const;
 		void setValue(string hashs);
-		void outPut() const;
 	private:
 		string hash;
 };

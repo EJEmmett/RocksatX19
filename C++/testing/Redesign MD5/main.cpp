@@ -8,10 +8,10 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <ctime>
-//#include "wordGenNew.h"
-#include "wordGenNew.cpp"
-//#include "MD5New.h"
-#include "MD5New.cpp"
+#include "wordGenNew.h"
+/* this no longer is required #include "MD5New.h"*/
+#include "md5.h"
+
 
 using namespace std;
 
@@ -23,7 +23,8 @@ int menu(){
 		<<"3. Random Number test\n"
 		<<"4. Random number loop testing\n"
 		<<"5. Read file list test\n"
-		<<"6. Exit.\n";
+    <<"6. md5 test.\n"
+    <<"7. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
 	return choice;
@@ -37,7 +38,7 @@ char* getTime(){
 
 int main(){
   Hash h;
-  string hash;
+  string hash, md1, newValue;
   int input, r;
   Random rand;
   do{
@@ -45,9 +46,8 @@ int main(){
     switch(input){
       case 1:
         //COMMENT: randomly sets the hash value, currently a work in progress.
-        h.setValue("ssdd");
-        h.outPut();
-        hash = h.getValue();
+        md1 = md5("ssdd");
+        cout << "this should work:? " << md1 << endl;
       break;
       case 2:
         cout << "time: " << getTime();
@@ -60,12 +60,17 @@ int main(){
       break;
       case 5:
         //COMMENT: reads the random word
-        rand.readFileTest();
+        cout << "Test: " << rand.readFileTest();
       break;
-      case 6: cout << "exiting"<<endl;
+      case 6:
+        newValue = rand.readFileTest();
+        cout << "MD5 random value: " << md5(newValue) << endl;
+
+      break;
+      case 7: cout << "exiting"<<endl;
+      break;
 			default: cout << "invalid choice"<<endl;
-			break;
     }
-  }while(input != 6);
+  }while(input != 7);
   return 0;
 }

@@ -13,7 +13,7 @@ class Random{
 		void setRandom(int r);
 		int returnNumber();
 		int getWordComb();
-		void readFileTest();
+		string readFileTest();
 
 	private:
 		int random;
