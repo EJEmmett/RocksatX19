@@ -23,7 +23,7 @@ int menu(){
 		<<"3. Random Number test\n"
 		<<"4. Random number loop testing\n"
 		<<"5. Read file list test\n"
-    <<"6. md5 test.\n"
+    <<"6. Random MD5 hash.\n"
     <<"7. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
@@ -37,7 +37,6 @@ char* getTime(){
 
 
 int main(){
-  Hash h;
   string hash, md1, newValue;
   int input, r;
   Random rand;
@@ -65,7 +64,6 @@ int main(){
       case 6:
         newValue = rand.readFileTest();
         cout << "MD5 random value: " << md5(newValue) << endl;
-
       break;
       case 7: cout << "exiting"<<endl;
       break;

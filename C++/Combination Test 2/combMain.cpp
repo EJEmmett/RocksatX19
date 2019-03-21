@@ -9,8 +9,8 @@
 #include <ctime>
 #include <boost/asio.hpp>
 //#include <sys/types.h>
-#include "hash1.h"
-#include "writing.h"
+//#include "writing.h"
+//no longer required. ^^
 #include "randomWordGen.h"
 #include "server1.h"
 
@@ -26,8 +26,9 @@ int menu(){
 		<<"5. Read file list test\n"
 		<<"6. Start server without being able to exit\n"
 		<<"7. start server in background\n"
-		<<"8. pass hash\n"
-		<<"9. Exit.\n";
+		<<"8. Random MD5 hash"	
+		<<"9. pass hash\n"
+		<<"10. Exit.\n";
 	cin >> choice;
 //the menu will never be cleared while this is tested. system("CLS");
 	return choice;
@@ -39,7 +40,6 @@ char* getTime(){
 }
 
 int main(){
-	Hash h;
 	Writing write;
 	Random rand;
 	Server start;
@@ -50,10 +50,8 @@ int main(){
 		switch(input){
 			case 1:
 				//COMMENT: randomly sets the hash value, currently a work in progress.
-				h.setValue("ssdd");
-				h.outPut();
-				hash = h.getValue();
-				write.mainWrite();
+  	        	md1 = md5("ssdd");
+          		cout << "this should work:? " << md1 << endl;
 			break;
 			case 2:
 				cout << "time: " << getTime();
@@ -74,15 +72,20 @@ int main(){
 			case 7: start.runServer();
 			break;
 			case 8: 
-				start.setHash(hash); 
-				cout << hash;
+     		   newValue = rand.readFileTest();
+     		   cout << "MD5 random value: " << md5(newValue) << endl;
 			break;
-			case 9: cout <<"EXITING"<<endl;
+			case 9:
+				hash = rand.readFileTest();
+				start.setHash(hash);
+				cout << "Succesful";
+			break;
+			case 10: cout <<"EXITING"<<endl;
 			break;
 			default: cout << "invalid choice"<<endl;
 			break;
 		}
-	}while(input != 9);
+	}while(input != 10);
 	//COMMENT: tests.
 	//cout << "\n MD5: " << hash;
 	//system("PAUSE");
