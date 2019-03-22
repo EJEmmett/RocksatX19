@@ -1,16 +1,14 @@
 //randomWordGen.cpp
+//wordGenNew.cpp
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <cstdlib>
 #include <vector>
-#include "randomWordGen.h"
+#include "wordGenNew.h"
 using namespace std;
 
-Random::Random()
-{
-	
-}
+Random::Random(){}
 
 void Random::setRandom(int r)
 {
@@ -36,7 +34,7 @@ int Random::getWordComb()
 	return r2;
 }
 
-void Random::readFileTest()
+string Random::readFileTest()
 {
 	ifstream in("dictionary.txt");
 	string line, s, word, mainWords;
@@ -44,21 +42,21 @@ void Random::readFileTest()
 	double tmp;
 	//COMMENT: this is a test to get the line number of a word.
 	/*tmp == temp var
-	while (getline(in, line)) 
+	while (getline(in, line))
 	{
 		cout << line <<endl;
-	}*/	
+	}*/
 	rand = Random::returnNumber();
 	//cout << rand << endl;
 	ifstream file1 ("dictionary.txt", ios::in);
-	
+
 	vector<string> readFromFile;
-	
+
 	while(file1>>s)
 	{
 		readFromFile.push_back(s);
 	}
-	
+
 	/*for(int i=0; i<readFromFile.size(); i++)
 	{
 		cout<<readFromFile[i]<<endl;
@@ -71,5 +69,5 @@ void Random::readFileTest()
 		word = readFromFile[rand2-1];
 		mainWords = mainWords + " " + word;
 	}
-	cout << mainWords;
+	return mainWords;
 }

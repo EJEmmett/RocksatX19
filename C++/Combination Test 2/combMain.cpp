@@ -12,6 +12,7 @@
 //#include "writing.h"
 //no longer required. ^^
 #include "randomWordGen.h"
+#include "md5.h"
 #include "server1.h"
 
 using namespace std;
@@ -40,7 +41,6 @@ char* getTime(){
 }
 
 int main(){
-	Writing write;
 	Random rand;
 	Server start;
 	string hash, word, newValue;
