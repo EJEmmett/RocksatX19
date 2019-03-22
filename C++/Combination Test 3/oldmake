@@ -1,0 +1,6 @@
+combMain: combMain.o
+	g++ -o run combMain.o -lboost_system -lboost_thread -lpthread
+combMain.o: combMain.cpp md5.cpp randomWordGen.cpp server1.cpp
+	g++ -c server1.cpp 
+clean:
+	rm -rf *.o combMain
