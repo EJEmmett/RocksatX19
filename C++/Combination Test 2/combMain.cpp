@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <ctime>
 #include <boost/asio.hpp>
-//#include <sys/types.h>
+#include <sys/types.h>
 //#include "writing.h"
 //no longer required. ^^
 #include "randomWordGen.h"
@@ -90,7 +90,6 @@ int main(){
 	//COMMENT: tests.
 	//cout << "\n MD5: " << hash;
 	//system("PAUSE");
-	//Print funciton for both ints and strings
 
 
 	return 0;

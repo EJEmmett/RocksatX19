@@ -6,6 +6,9 @@
 #include <vector>
 using namespace std;
 
+#ifndef RANDOMWORDGEN_H
+#define RANDOMWORDGEN_H
+
 class Random
 {
 	public:
@@ -14,7 +17,9 @@ class Random
 		int returnNumber();
 		int getWordComb();
 		void readFileTest();
-	
+
 	private:
 		int random;
 };
+
+#endif

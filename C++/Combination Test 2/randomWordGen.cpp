@@ -5,7 +5,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <vector>
-#include "wordGenNew.h"
+#include "randomWordGen.h"
 using namespace std;
 
 Random::Random(){}

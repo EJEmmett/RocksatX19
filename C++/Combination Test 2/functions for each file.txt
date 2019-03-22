@@ -1,0 +1,16 @@
+combMain
+
+Random rand is linked to randomWordGen.h
+Server start is linked to server1.h
+
+random word public functions are:
+  |
+  --> Random();
+  |
+  --> setRandom();
+  |
+  --> returnNumber();
+  |
+  --> getWordComb();
+  |
+  --> readFileTest();
